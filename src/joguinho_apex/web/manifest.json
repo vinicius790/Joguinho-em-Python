@@ -1,0 +1,19 @@
+{
+  "name": "APEX NEXUS",
+  "short_name": "Nexus",
+  "description": "Jogo de grade por turnos: moedas, minas, inimigos e um chefe.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090b12",
+  "theme_color": "#111725",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

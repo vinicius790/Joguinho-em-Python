@@ -1,0 +1,16 @@
+.git
+.github
+.venv
+venv
+**/__pycache__
+.pytest_cache
+.ruff_cache
+.mypy_cache
+*.sqlite3
+*.zip
+LOG_REORGANIZACAO.txt
+docs
+tests
+legacy
+examples
+scripts

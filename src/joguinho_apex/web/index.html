@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111725">
+  <title>APEX NEXUS - Console web</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>APEX NEXUS</h1>
+      <p>Colete moedas, desvie das minas, fuja dos inimigos e derrote os chefes.</p>
+    </header>
+
+    <form id="setup" class="card" autocomplete="off">
+      <label>Jogador
+        <input id="name" name="name" maxlength="24" pattern="[\p{L}\p{N}_ \-]+" placeholder="opcional (para ranking e save)">
+      </label>
+      <label>Modo
+        <select id="mode" name="mode"></select>
+      </label>
+      <label>Dificuldade
+        <select id="difficulty" name="difficulty"></select>
+      </label>
+      <label>Seed
+        <input id="seed" name="seed" type="number" min="0" step="1" placeholder="aleatória">
+      </label>
+      <div class="buttons">
+        <button type="submit">Nova partida</button>
+        <button type="button" id="save">Salvar</button>
+        <button type="button" id="load">Carregar</button>
+      </div>
+    </form>
+
+    <section class="play">
+      <div class="card board">
+        <canvas id="board" width="840" height="420" tabindex="0" role="img"
+                aria-label="Tabuleiro do jogo. Use W, A, S, D ou as setas para mover."></canvas>
+        <p id="message" role="status" aria-live="polite">Carregando...</p>
+        <div class="pad" aria-label="Controles na tela">
+          <button type="button" data-action="w" aria-label="Mover para cima">&#9650;</button>
+          <button type="button" data-action="a" aria-label="Mover para a esquerda">&#9664;</button>
+          <button type="button" data-action="s" aria-label="Mover para baixo">&#9660;</button>
+          <button type="button" data-action="d" aria-label="Mover para a direita">&#9654;</button>
+          <button type="button" data-action=".">Esperar</button>
+          <button type="button" data-action="e">Dash</button>
+          <button type="button" data-action="f">Pulso</button>
+          <button type="button" data-action="b">Bomba</button>
+          <button type="button" data-action="h">Poção</button>
+          <button type="button" id="next" hidden>Próxima fase</button>
+        </div>
+        <div id="shop" class="pad" aria-label="Loja" hidden>
+          <button type="button" data-buy="heart">1 Coração (12)</button>
+          <button type="button" data-buy="shield">2 Escudo (8)</button>
+          <button type="button" data-buy="boots">3 Botas (15)</button>
+          <button type="button" data-buy="potion">4 Poção (6)</button>
+          <button type="button" data-buy="bomb">5 Bomba (10)</button>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h2 id="level">-</h2>
+        <p id="objective"></p>
+        <dl id="hud"></dl>
+        <h2>Legenda</h2>
+        <ul id="legend"></ul>
+        <h2>Teclas</h2>
+        <p>W A S D ou setas: mover. Espaço: esperar. E: dash (salta minas e fogo).
+           F: pulso (atordoa inimigos e fere o chefe). B: bomba. H: poção.
+           Entre fases: 1 a 5 compram na loja e Enter segue para a próxima fase.</p>
+        <h2>Ranking</h2>
+        <ol id="ranking"></ol>
+      </aside>
+    </section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

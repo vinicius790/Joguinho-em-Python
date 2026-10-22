@@ -1,0 +1,7 @@
+name: Feature
+description: Sugerir evolução
+body:
+  - type: textarea
+    id: idea
+    attributes: {label: Ideia, description: Descrição da funcionalidade}
+    validations: {required: true}

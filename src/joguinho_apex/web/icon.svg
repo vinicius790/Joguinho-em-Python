@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="APEX NEXUS">
+  <rect width="64" height="64" rx="12" fill="#111725"/>
+  <rect x="8" y="8" width="48" height="48" rx="4" fill="none" stroke="#2b3552" stroke-width="4"/>
+  <circle cx="24" cy="38" r="9" fill="#5dff8f"/>
+  <circle cx="44" cy="22" r="5" fill="#ffd84d"/>
+  <path d="M44 34l7 7-7 7-7-7z" fill="#ff5252"/>
+</svg>

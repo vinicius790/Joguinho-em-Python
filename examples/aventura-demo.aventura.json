@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "id": "trilha-inicial",
+  "title": "Trilha Inicial",
+  "description": "Uma campanha curta para conhecer os pacotes de fases.",
+  "author": "APEX NEXUS",
+  "stages": [
+    {"id": "ponte", "file": "aventura-demo-01.nivel"},
+    {"id": "torre", "file": "aventura-demo-02.nivel"}
+  ]
+}

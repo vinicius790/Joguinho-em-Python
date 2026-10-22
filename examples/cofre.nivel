@@ -1,0 +1,10 @@
+; Fase de exemplo do editor: joguinho play --level examples/cofre.nivel
+titulo: Cofre
+meta: 3
+tempo: 150
+
+##############
+#O  $   Q   E#
+#   ##  $    #
+#  X     $   #
+##############
